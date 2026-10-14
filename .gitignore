@@ -1,0 +1,6 @@
+*.zip
+.idea/
+*.iml
+build/
+.gradle/
+run/
