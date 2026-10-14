@@ -1,6 +1,16 @@
 {
   "itemGroup.crazyfarm": "Crazy Farm",
-  "block.crazyfarm.onion_crop": "Onion Crop",
+  "item.crazyfarm.onion": "Onion",
   "item.crazyfarm.onion_seeds": "Onion Seeds",
-  "item.crazyfarm.onion": "Onion"
+  "item.crazyfarm.turnip": "Turnip",
+  "item.crazyfarm.turnip_seeds": "Turnip Seeds",
+  "item.crazyfarm.radish": "Radish",
+  "item.crazyfarm.radish_seeds": "Radish Seeds",
+  "item.crazyfarm.cassava": "Cassava",
+  "item.crazyfarm.cassava_cutting": "Cassava Cutting",
+  "item.crazyfarm.cooked_cassava": "Cooked Cassava",
+  "block.crazyfarm.onion_crop": "Onion Crop",
+  "block.crazyfarm.turnip_crop": "Turnip Crop",
+  "block.crazyfarm.radish_crop": "Radish Crop",
+  "block.crazyfarm.cassava_crop": "Cassava Crop"
 }

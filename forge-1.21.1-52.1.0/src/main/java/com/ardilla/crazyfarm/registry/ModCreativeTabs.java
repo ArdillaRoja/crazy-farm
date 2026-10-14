@@ -19,6 +19,13 @@ public final class ModCreativeTabs
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.ONION_SEEDS.get());
                 output.accept(ModItems.ONION.get());
+                output.accept(ModItems.TURNIP_SEEDS.get());
+                output.accept(ModItems.TURNIP.get());
+                output.accept(ModItems.RADISH_SEEDS.get());
+                output.accept(ModItems.RADISH.get());
+                output.accept(ModItems.CASSAVA_CUTTING.get());
+                output.accept(ModItems.CASSAVA.get());
+                output.accept(ModItems.COOKED_CASSAVA.get());
             }).build());
 
     private ModCreativeTabs() {}

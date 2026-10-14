@@ -1,4 +1,6 @@
 {
   "parent": "minecraft:item/generated",
-  "textures": { "layer0": "crazyfarm:item/onion_seeds" }
+  "textures": {
+    "layer0": "crazyfarm:item/onion_seeds"
+  }
 }

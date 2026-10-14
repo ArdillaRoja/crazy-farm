@@ -1,6 +1,16 @@
 {
   "itemGroup.crazyfarm": "Crazy Farm",
-  "block.crazyfarm.onion_crop": "Cultivo de cebolla",
+  "item.crazyfarm.onion": "Cebolla",
   "item.crazyfarm.onion_seeds": "Semillas de cebolla",
-  "item.crazyfarm.onion": "Cebolla"
+  "item.crazyfarm.turnip": "Nabo",
+  "item.crazyfarm.turnip_seeds": "Semillas de nabo",
+  "item.crazyfarm.radish": "Rábano",
+  "item.crazyfarm.radish_seeds": "Semillas de rábano",
+  "item.crazyfarm.cassava": "Yuca",
+  "item.crazyfarm.cassava_cutting": "Esqueje de yuca",
+  "item.crazyfarm.cooked_cassava": "Yuca cocida",
+  "block.crazyfarm.onion_crop": "Cultivo de cebolla",
+  "block.crazyfarm.turnip_crop": "Cultivo de nabo",
+  "block.crazyfarm.radish_crop": "Cultivo de rábano",
+  "block.crazyfarm.cassava_crop": "Cultivo de yuca"
 }

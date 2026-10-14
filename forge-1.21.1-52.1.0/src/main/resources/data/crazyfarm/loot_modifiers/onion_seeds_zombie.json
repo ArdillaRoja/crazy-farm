@@ -1,8 +1,14 @@
 {
   "type": "crazyfarm:add_item",
   "conditions": [
-    { "condition": "forge:loot_table_id", "loot_table_id": "minecraft:entities/zombie" },
-    { "condition": "minecraft:random_chance", "chance": 0.025 }
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/zombie"
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.02
+    }
   ],
   "item": "crazyfarm:onion_seeds",
   "chance": 1.0,

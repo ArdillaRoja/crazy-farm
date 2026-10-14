@@ -1,3 +1,8 @@
 {
-  "values": ["crazyfarm:onion_seeds"]
+  "values": [
+    "crazyfarm:onion_seeds",
+    "crazyfarm:turnip_seeds",
+    "crazyfarm:radish_seeds",
+    "crazyfarm:cassava_cutting"
+  ]
 }

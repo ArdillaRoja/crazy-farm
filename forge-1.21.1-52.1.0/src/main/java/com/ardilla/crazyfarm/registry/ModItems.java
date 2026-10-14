@@ -1,23 +1,54 @@
 package com.ardilla.crazyfarm.registry;
 
 import com.ardilla.crazyfarm.CrazyFarm;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
 
 public final class ModItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrazyFarm.MODID);
 
-    public static final RegistryObject<Item> ONION_SEEDS = ITEMS.register("onion_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new Item.Properties()));
+    // Cebolla
+    public static final RegistryObject<Item> ONION_SEEDS = seeds("onion_seeds", () -> ModBlocks.ONION_CROP.get());
+    public static final RegistryObject<Item> ONION = food("onion", 3, 0.4f);
 
-    public static final RegistryObject<Item> ONION = ITEMS.register("onion",
+    // Nabo
+    public static final RegistryObject<Item> TURNIP_SEEDS = seeds("turnip_seeds", () -> ModBlocks.TURNIP_CROP.get());
+    public static final RegistryObject<Item> TURNIP = food("turnip", 3, 0.4f);
+
+    // Rábano
+    public static final RegistryObject<Item> RADISH_SEEDS = seeds("radish_seeds", () -> ModBlocks.RADISH_CROP.get());
+    public static final RegistryObject<Item> RADISH = food("radish", 2, 0.3f);
+
+    // Yuca: cruda marea y puede envenenar; cocida alimenta mucho
+    public static final RegistryObject<Item> CASSAVA_CUTTING = seeds("cassava_cutting", () -> ModBlocks.CASSAVA_CROP.get());
+    public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(3).saturationModifier(0.4f).build())));
+                    .nutrition(2).saturationModifier(0.3f)
+                    .effect(new MobEffectInstance(MobEffects.CONFUSION, 200), 1.0f)
+                    .effect(new MobEffectInstance(MobEffects.POISON, 100), 0.4f)
+                    .build())));
+    public static final RegistryObject<Item> COOKED_CASSAVA = food("cooked_cassava", 8, 0.8f);
+
+    private static RegistryObject<Item> seeds(String name, Supplier<Block> crop)
+    {
+        return ITEMS.register(name, () -> new ItemNameBlockItem(crop.get(), new Item.Properties()));
+    }
+
+    private static RegistryObject<Item> food(String name, int nutrition, float saturation)
+    {
+        return ITEMS.register(name, () -> new Item(new Item.Properties().food(
+                new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).build())));
+    }
 
     private ModItems() {}
 }

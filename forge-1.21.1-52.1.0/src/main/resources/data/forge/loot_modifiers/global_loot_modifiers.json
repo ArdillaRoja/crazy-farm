@@ -2,6 +2,12 @@
   "replace": false,
   "entries": [
     "crazyfarm:onion_seeds_village_chests",
-    "crazyfarm:onion_seeds_zombie"
+    "crazyfarm:onion_seeds_zombie",
+    "crazyfarm:turnip_seeds_village_chests",
+    "crazyfarm:turnip_seeds_zombie",
+    "crazyfarm:radish_seeds_village_chests",
+    "crazyfarm:radish_seeds_zombie",
+    "crazyfarm:cassava_cutting_village_chests",
+    "crazyfarm:cassava_cutting_zombie"
   ]
 }

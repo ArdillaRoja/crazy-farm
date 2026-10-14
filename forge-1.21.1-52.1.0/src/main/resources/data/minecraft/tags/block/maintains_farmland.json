@@ -1,3 +1,8 @@
 {
-  "values": ["crazyfarm:onion_crop"]
+  "values": [
+    "crazyfarm:onion_crop",
+    "crazyfarm:turnip_crop",
+    "crazyfarm:radish_crop",
+    "crazyfarm:cassava_crop"
+  ]
 }
