@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "block": "crazyfarm:rejuvenation_plant",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "age": "3"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "crazyfarm:rejuvenation_fruit"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "crazyfarm:blocks/rejuvenation_plant"
+}

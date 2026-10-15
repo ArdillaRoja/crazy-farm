@@ -12,5 +12,8 @@
   "block.crazyfarm.onion_crop": "Onion Crop",
   "block.crazyfarm.turnip_crop": "Turnip Crop",
   "block.crazyfarm.radish_crop": "Radish Crop",
-  "block.crazyfarm.cassava_crop": "Cassava Crop"
+  "block.crazyfarm.cassava_crop": "Cassava Crop",
+  "block.crazyfarm.rejuvenation_plant": "Rejuvenation Plant",
+  "item.crazyfarm.rejuvenation_sprout": "Rejuvenation Sprout",
+  "item.crazyfarm.rejuvenation_fruit": "Rejuvenation Fruit"
 }

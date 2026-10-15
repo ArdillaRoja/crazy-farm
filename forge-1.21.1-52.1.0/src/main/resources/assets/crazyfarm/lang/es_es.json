@@ -12,5 +12,8 @@
   "block.crazyfarm.onion_crop": "Cultivo de cebolla",
   "block.crazyfarm.turnip_crop": "Cultivo de nabo",
   "block.crazyfarm.radish_crop": "Cultivo de rábano",
-  "block.crazyfarm.cassava_crop": "Cultivo de yuca"
+  "block.crazyfarm.cassava_crop": "Cultivo de yuca",
+  "block.crazyfarm.rejuvenation_plant": "Planta del Rejuvenecimiento",
+  "item.crazyfarm.rejuvenation_sprout": "Brote del Rejuvenecimiento",
+  "item.crazyfarm.rejuvenation_fruit": "Fruto del Rejuvenecimiento"
 }

@@ -9,9 +9,9 @@ Crazy Farm es un mod de agricultura para Minecraft 1.21.1 con cultivos 3D, un si
 | Aspecto | Decisión |
 | --- | --- |
 | Nombre / ID | Crazy Farm / `crazyfarm` (el ID no se cambia una vez publicado) |
-| Versión | Minecraft 1.21.1 |
-| Loaders | Forge, NeoForge y Fabric, desde un solo proyecto |
-| Estructura | Plantilla MultiLoader: módulo `common` con casi toda la lógica + módulos por loader |
+| Versión | Minecraft 1.21.1 primero; después un port a 1.20.1 en otra rama de Git |
+| Loaders | Forge primero (MDK 52.1.0). NeoForge y Fabric quedan para más adelante |
+| Estructura | Por ahora un solo proyecto Forge en `forge-1.21.1-52.1.0/`. La plantilla MultiLoader (módulo `common` + módulos por loader) se evalúa cuando se sumen más loaders |
 | Librería opcional | GeckoLib para modelos y animaciones del granjero y los topos |
 | Estilo visual | Plantas con hojas 2D y frutos/raíces en 3D (modelos JSON) |
 
@@ -24,6 +24,8 @@ Crazy Farm es un mod de agricultura para Minecraft 1.21.1 con cultivos 3D, un si
 El jugador puede llegar a 25 corazones: 10 base, 10 permanentes (Fruta de la Vida) y 5 temporales. Hay dos frutas con roles distintos.
 
 **Fruto del Rejuvenecimiento** (fruto natural): crece en las Lush Caves con poca luz, sobre musgo o colgando del techo. Su planta se ve con hojas 2D y el fruto en 3D. Los corazones temporales que da se pierden al morir.
+
+**Brote del Rejuvenecimiento:** ítem que se planta bajo un techo para criar la planta. Solo existe en creativo o por comandos y nunca se obtiene en supervivencia. La planta también aparece sola colgando del techo de las Lush Caves, crece solo con luz baja (7 o menos), se cosecha con clic derecho al madurar y vuelve a la etapa 1, así da frutos de forma continua. La versión sobre musgo queda para más adelante.
 
 **Fruta de la Vida** (fruto mejorado): da corazones permanentes, que se conservan al morir.
 
@@ -50,7 +52,10 @@ Cada cultivo tiene hojas 2D y su parte comestible en 3D, asomando de la tierra. 
 **Vegetales iniciales:** cebolla, yuca, nabo y rábano. Cada uno lleva su bloque de cultivo por etapas, su ítem comestible y su versión mutante.
 
 - Idea: la yuca cruda da náuseas o veneno y la cocida alimenta mucho. Podría ser un cultivo más alto, de 2 bloques.
-- Cómo se consiguen al inicio: romper pasto, cofres de aldea o el comerciante errante.
+- Cómo se consiguen al inicio (decidido en la Etapa 1): cofres de casas de aldea (40 %, 1 a 3), 2 % de los zombis, y los aldeanos granjeros las plantan. No salen al romper pasto. El comerciante errante y las granjas de aldea con cultivos ya plantados quedan pendientes.
+- Cosecha: cada cultivo maduro da de 1 a 4 frutos. Cada fruto extra exige haber conseguido el anterior (sin riego: 75 % uno, 19 % dos, 5 % tres, 1,5 % cuatro). Cada nivel del dispositivo de riego sube la probabilidad de cada tirada extra en 12 puntos. Pendiente decidir si además hay un mínimo garantizado por nivel.
+- Bonemeal: avanza 1 etapa (2 con un 25 % de suerte), así que hacen falta unos 2 o 3 polvos.
+- La yuca se planta con un esqueje. Cruda da náuseas (siempre) y veneno (40 %); cocida se hace en horno, ahumador o fogata.
 
 **Cultivos vanilla en 3D:** se reemplazan los modelos de zanahoria, papa y remolacha (`carrots_stage0..3`, etc.) desde el propio mod. Un resource pack que cambie esos mismos modelos tendría prioridad.
 

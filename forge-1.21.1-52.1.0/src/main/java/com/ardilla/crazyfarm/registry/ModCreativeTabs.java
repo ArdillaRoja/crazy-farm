@@ -26,6 +26,8 @@ public final class ModCreativeTabs
                 output.accept(ModItems.CASSAVA_CUTTING.get());
                 output.accept(ModItems.CASSAVA.get());
                 output.accept(ModItems.COOKED_CASSAVA.get());
+                output.accept(ModItems.REJUVENATION_SPROUT.get());
+                output.accept(ModItems.REJUVENATION_FRUIT.get());
             }).build());
 
     private ModCreativeTabs() {}

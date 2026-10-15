@@ -6,6 +6,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -38,6 +39,16 @@ public final class ModItems
                     .effect(new MobEffectInstance(MobEffects.POISON, 100), 0.4f)
                     .build())));
     public static final RegistryObject<Item> COOKED_CASSAVA = food("cooked_cassava", 8, 0.8f);
+
+    // Fruto del Rejuvenecimiento. El brote solo se consigue en creativo o por comandos.
+    public static final RegistryObject<Item> REJUVENATION_SPROUT = ITEMS.register("rejuvenation_sprout",
+            () -> new ItemNameBlockItem(ModBlocks.REJUVENATION_PLANT.get(), new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> REJUVENATION_FRUIT = ITEMS.register("rejuvenation_fruit",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                    .nutrition(2).saturationModifier(0.3f).alwaysEdible()
+                    .effect(new MobEffectInstance(MobEffects.REGENERATION, 200), 1.0f)
+                    .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200), 1.0f)
+                    .build())));
 
     private static RegistryObject<Item> seeds(String name, Supplier<Block> crop)
     {

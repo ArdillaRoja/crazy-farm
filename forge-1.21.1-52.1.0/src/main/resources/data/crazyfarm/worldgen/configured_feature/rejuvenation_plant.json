@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "crazyfarm:rejuvenation_plant",
+            "Properties": {
+              "age": "3"
+            }
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "crazyfarm:rejuvenation_plant",
+            "Properties": {
+              "age": "2"
+            }
+          },
+          "weight": 1
+        },
+        {
+          "data": {
+            "Name": "crazyfarm:rejuvenation_plant",
+            "Properties": {
+              "age": "1"
+            }
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}
