@@ -2,6 +2,8 @@ package com.ardilla.crazyfarm.registry;
 
 import com.ardilla.crazyfarm.CrazyFarm;
 import com.ardilla.crazyfarm.block.CrazyCropBlock;
+import com.ardilla.crazyfarm.block.IrrigationDeviceBlock;
+import com.ardilla.crazyfarm.block.MutantCropBlock;
 import com.ardilla.crazyfarm.block.RejuvenationPlantBlock;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -19,10 +21,17 @@ public final class ModBlocks
 {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, CrazyFarm.MODID);
 
-    public static final RegistryObject<Block> ONION_CROP = crop("onion_crop", ModItems.ONION_SEEDS, ModItems.ONION);
-    public static final RegistryObject<Block> TURNIP_CROP = crop("turnip_crop", ModItems.TURNIP_SEEDS, ModItems.TURNIP);
-    public static final RegistryObject<Block> RADISH_CROP = crop("radish_crop", ModItems.RADISH_SEEDS, ModItems.RADISH);
-    public static final RegistryObject<Block> CASSAVA_CROP = crop("cassava_crop", ModItems.CASSAVA_CUTTING, ModItems.CASSAVA);
+    // Cultivos mutantes (se declaran antes que los cultivos, que los referencian)
+    public static final RegistryObject<Block> ONION_GIANT_CROP = mutant("onion_giant_crop", ModItems.GIANT_ONION);
+    public static final RegistryObject<Block> TURNIP_GIANT_CROP = mutant("turnip_giant_crop", ModItems.GIANT_TURNIP);
+    public static final RegistryObject<Block> RADISH_GIANT_CROP = mutant("radish_giant_crop", ModItems.GIANT_RADISH);
+    public static final RegistryObject<Block> CASSAVA_GIANT_CROP = mutant("cassava_giant_crop", ModItems.GIANT_CASSAVA);
+
+    // Cultivos
+    public static final RegistryObject<Block> ONION_CROP = crop("onion_crop", ModItems.ONION_SEEDS, ModItems.ONION, ONION_GIANT_CROP);
+    public static final RegistryObject<Block> TURNIP_CROP = crop("turnip_crop", ModItems.TURNIP_SEEDS, ModItems.TURNIP, TURNIP_GIANT_CROP);
+    public static final RegistryObject<Block> RADISH_CROP = crop("radish_crop", ModItems.RADISH_SEEDS, ModItems.RADISH, RADISH_GIANT_CROP);
+    public static final RegistryObject<Block> CASSAVA_CROP = crop("cassava_crop", ModItems.CASSAVA_CUTTING, ModItems.CASSAVA, CASSAVA_GIANT_CROP);
 
     public static final RegistryObject<Block> REJUVENATION_PLANT = BLOCKS.register("rejuvenation_plant",
             () -> new RejuvenationPlantBlock(BlockBehaviour.Properties.of()
@@ -35,9 +44,35 @@ public final class ModBlocks
                     .lightLevel(state -> switch (state.getValue(RejuvenationPlantBlock.AGE)) { case 3 -> 5; case 2 -> 2; default -> 0; })
                     .pushReaction(PushReaction.DESTROY)));
 
-    private static RegistryObject<Block> crop(String name, Supplier<? extends Item> seed, Supplier<? extends Item> produce)
+    // Dispositivos de riego, niveles 1 a 4
+    public static final RegistryObject<Block> IRRIGATION_DEVICE_1 = device("irrigation_device_1", 1);
+    public static final RegistryObject<Block> IRRIGATION_DEVICE_2 = device("irrigation_device_2", 2);
+    public static final RegistryObject<Block> IRRIGATION_DEVICE_3 = device("irrigation_device_3", 3);
+    public static final RegistryObject<Block> IRRIGATION_DEVICE_4 = device("irrigation_device_4", 4);
+
+    private static RegistryObject<Block> crop(String name, Supplier<? extends Item> seed, Supplier<? extends Item> produce,
+                                              Supplier<? extends Block> mutant)
     {
-        return BLOCKS.register(name, () -> new CrazyCropBlock(cropProperties(), seed, produce));
+        return BLOCKS.register(name, () -> new CrazyCropBlock(cropProperties(), seed, produce, mutant));
+    }
+
+    private static RegistryObject<Block> mutant(String name, Supplier<? extends Item> giantItem)
+    {
+        return BLOCKS.register(name, () -> new MutantCropBlock(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.CROP)
+                .pushReaction(PushReaction.DESTROY), giantItem));
+    }
+
+    private static RegistryObject<Block> device(String name, int tier)
+    {
+        return BLOCKS.register(name, () -> new IrrigationDeviceBlock(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.METAL)
+                .strength(2.0f)
+                .sound(SoundType.METAL)
+                .noOcclusion(), tier));
     }
 
     private static BlockBehaviour.Properties cropProperties()

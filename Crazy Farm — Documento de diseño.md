@@ -74,6 +74,10 @@ Es un bloque que mantiene húmeda la tierra arada en un radio. No necesita agua 
 
 Los radios, velocidades y porcentajes son valores iniciales y se ajustan probando. El área que revisa el bloque debe ser limitada para no causar lag.
 
+**Implementación (Etapa 2):** cada nivel es un bloque distinto. El dispositivo revisa cada 2 segundos un cuadrado de lado 2×radio+1, desde 2 bloques por debajo hasta 1 por encima de él. Hidrata la tierra arada y acelera cualquier cultivo de tipo `CropBlock` (también los vanilla) dándole tiradas de crecimiento extra. También sube la probabilidad de frutos extra por cosecha (ver Cultivos). Recetas provisionales: nivel 1 = tolva + cubo de agua + 4 lingotes de hierro; nivel 2 = nivel 1 + 4 lingotes de oro; nivel 3 = nivel 2 + 4 diamantes; nivel 4 = nivel 3 + 1 lingote de netherita. Los valores están en `farming/Irrigation.java`.
+
+**Mutantes:** al madurar un cultivo de Crazy Farm, si hay riego, puede cambiar a su versión gigante (cebolla, nabo, rábano o yuca gigante). Al romperla suelta el ítem gigante y 1 o 2 semillas. Los ítems gigantes no son comestibles; sirven para vender al granjero.
+
 ## Vitilium, VitCoin y equipo
 
 El Vitilium es el mineral nuevo. Abunda en las Lush Caves y es menos frecuente por debajo de la capa 0 (variante de pizarra profunda). La VitCoin (VC) sale del lingote, así que cada moneda cuesta netherita y tiene valor real.

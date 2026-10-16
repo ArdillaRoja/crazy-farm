@@ -15,5 +15,21 @@
   "block.crazyfarm.cassava_crop": "Cultivo de yuca",
   "block.crazyfarm.rejuvenation_plant": "Planta del Rejuvenecimiento",
   "item.crazyfarm.rejuvenation_sprout": "Brote del Rejuvenecimiento",
-  "item.crazyfarm.rejuvenation_fruit": "Fruto del Rejuvenecimiento"
+  "item.crazyfarm.rejuvenation_fruit": "Fruto del Rejuvenecimiento",
+  "block.crazyfarm.irrigation_device_1": "Dispositivo de riego (Nivel 1)",
+  "item.crazyfarm.irrigation_device_1": "Dispositivo de riego (Nivel 1)",
+  "block.crazyfarm.irrigation_device_2": "Dispositivo de riego (Nivel 2)",
+  "item.crazyfarm.irrigation_device_2": "Dispositivo de riego (Nivel 2)",
+  "block.crazyfarm.irrigation_device_3": "Dispositivo de riego (Nivel 3)",
+  "item.crazyfarm.irrigation_device_3": "Dispositivo de riego (Nivel 3)",
+  "block.crazyfarm.irrigation_device_4": "Dispositivo de riego (Nivel 4)",
+  "item.crazyfarm.irrigation_device_4": "Dispositivo de riego (Nivel 4)",
+  "item.crazyfarm.giant_onion": "Cebolla gigante",
+  "block.crazyfarm.onion_giant_crop": "Cultivo de cebolla gigante",
+  "item.crazyfarm.giant_turnip": "Nabo gigante",
+  "block.crazyfarm.turnip_giant_crop": "Cultivo de nabo gigante",
+  "item.crazyfarm.giant_radish": "Rábano gigante",
+  "block.crazyfarm.radish_giant_crop": "Cultivo de rábano gigante",
+  "item.crazyfarm.giant_cassava": "Yuca gigante",
+  "block.crazyfarm.cassava_giant_crop": "Cultivo de yuca gigante"
 }

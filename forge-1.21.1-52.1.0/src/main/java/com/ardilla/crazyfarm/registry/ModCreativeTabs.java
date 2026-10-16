@@ -28,6 +28,14 @@ public final class ModCreativeTabs
                 output.accept(ModItems.COOKED_CASSAVA.get());
                 output.accept(ModItems.REJUVENATION_SPROUT.get());
                 output.accept(ModItems.REJUVENATION_FRUIT.get());
+                output.accept(ModItems.IRRIGATION_DEVICE_1.get());
+                output.accept(ModItems.IRRIGATION_DEVICE_2.get());
+                output.accept(ModItems.IRRIGATION_DEVICE_3.get());
+                output.accept(ModItems.IRRIGATION_DEVICE_4.get());
+                output.accept(ModItems.GIANT_ONION.get());
+                output.accept(ModItems.GIANT_TURNIP.get());
+                output.accept(ModItems.GIANT_RADISH.get());
+                output.accept(ModItems.GIANT_CASSAVA.get());
             }).build());
 
     private ModCreativeTabs() {}

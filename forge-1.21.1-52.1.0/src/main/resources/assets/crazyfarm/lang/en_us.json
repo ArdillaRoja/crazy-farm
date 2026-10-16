@@ -15,5 +15,21 @@
   "block.crazyfarm.cassava_crop": "Cassava Crop",
   "block.crazyfarm.rejuvenation_plant": "Rejuvenation Plant",
   "item.crazyfarm.rejuvenation_sprout": "Rejuvenation Sprout",
-  "item.crazyfarm.rejuvenation_fruit": "Rejuvenation Fruit"
+  "item.crazyfarm.rejuvenation_fruit": "Rejuvenation Fruit",
+  "block.crazyfarm.irrigation_device_1": "Irrigation Device (Level 1)",
+  "item.crazyfarm.irrigation_device_1": "Irrigation Device (Level 1)",
+  "block.crazyfarm.irrigation_device_2": "Irrigation Device (Level 2)",
+  "item.crazyfarm.irrigation_device_2": "Irrigation Device (Level 2)",
+  "block.crazyfarm.irrigation_device_3": "Irrigation Device (Level 3)",
+  "item.crazyfarm.irrigation_device_3": "Irrigation Device (Level 3)",
+  "block.crazyfarm.irrigation_device_4": "Irrigation Device (Level 4)",
+  "item.crazyfarm.irrigation_device_4": "Irrigation Device (Level 4)",
+  "item.crazyfarm.giant_onion": "Giant Onion",
+  "block.crazyfarm.onion_giant_crop": "Giant Onion Crop",
+  "item.crazyfarm.giant_turnip": "Giant Turnip",
+  "block.crazyfarm.turnip_giant_crop": "Giant Turnip Crop",
+  "item.crazyfarm.giant_radish": "Giant Radish",
+  "block.crazyfarm.radish_giant_crop": "Giant Radish Crop",
+  "item.crazyfarm.giant_cassava": "Giant Cassava",
+  "block.crazyfarm.cassava_giant_crop": "Giant Cassava Crop"
 }

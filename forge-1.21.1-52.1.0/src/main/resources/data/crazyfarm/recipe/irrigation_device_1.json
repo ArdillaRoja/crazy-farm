@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "pattern": [
+    "IWI",
+    "IHI"
+  ],
+  "result": {
+    "id": "crazyfarm:irrigation_device_1",
+    "count": 1
+  }
+}

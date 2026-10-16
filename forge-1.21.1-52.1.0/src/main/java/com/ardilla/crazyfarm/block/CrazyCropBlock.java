@@ -4,6 +4,7 @@ import com.ardilla.crazyfarm.farming.CropYield;
 import com.ardilla.crazyfarm.farming.Irrigation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
@@ -21,7 +22,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-/** Cultivo base de Crazy Farm: 4 etapas (age 0 a 3), 1 a 4 frutos al cosechar y bonemeal más lento. */
+/**
+ * Cultivo base de Crazy Farm: 4 etapas (age 0 a 3), 1 a 4 frutos al cosechar, bonemeal más lento
+ * y una probabilidad de mutar a su versión gigante al madurar cerca de un dispositivo de riego.
+ */
 public class CrazyCropBlock extends CropBlock
 {
     public static final int MAX_AGE = 3;
@@ -29,12 +33,15 @@ public class CrazyCropBlock extends CropBlock
 
     private final Supplier<? extends ItemLike> seed;
     private final Supplier<? extends ItemLike> produce;
+    private final Supplier<? extends Block> mutant;
 
-    public CrazyCropBlock(Properties properties, Supplier<? extends ItemLike> seed, Supplier<? extends ItemLike> produce)
+    public CrazyCropBlock(Properties properties, Supplier<? extends ItemLike> seed,
+                          Supplier<? extends ItemLike> produce, Supplier<? extends Block> mutant)
     {
         super(properties);
         this.seed = seed;
         this.produce = produce;
+        this.mutant = mutant;
     }
 
     @Override
@@ -66,6 +73,34 @@ public class CrazyCropBlock extends CropBlock
     protected int getBonemealAgeIncrease(Level level)
     {
         return level.random.nextFloat() < 0.25f ? 2 : 1;
+    }
+
+    @Override
+    protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random)
+    {
+        super.randomTick(state, level, pos, random);
+        tryMutate(state, level, pos, random);
+    }
+
+    @Override
+    public void growCrops(Level level, BlockPos pos, BlockState state)
+    {
+        super.growCrops(level, pos, state);
+        if (level instanceof ServerLevel serverLevel)
+            tryMutate(state, serverLevel, pos, serverLevel.random);
+    }
+
+    /** Si el cultivo acaba de madurar, puede convertirse en su versión gigante según el riego. */
+    private void tryMutate(BlockState before, ServerLevel level, BlockPos pos, RandomSource random)
+    {
+        if (isMaxAge(before))
+            return;
+        BlockState after = level.getBlockState(pos);
+        if (!after.is(this) || !isMaxAge(after))
+            return;
+        double chance = Irrigation.mutationChance(Irrigation.levelAt(level, pos));
+        if (chance > 0.0 && random.nextDouble() < chance)
+            level.setBlock(pos, mutant.get().defaultBlockState(), Block.UPDATE_ALL);
     }
 
     /** El loot table da el primer fruto y las semillas; aquí se suman los frutos extra. */

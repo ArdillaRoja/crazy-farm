@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "minecraft:diamond"
+    },
+    "D": {
+      "item": "crazyfarm:irrigation_device_2"
+    }
+  },
+  "pattern": [
+    "M M",
+    " D ",
+    "M M"
+  ],
+  "result": {
+    "id": "crazyfarm:irrigation_device_3",
+    "count": 1
+  }
+}

@@ -3,6 +3,10 @@
     "crazyfarm:onion_crop",
     "crazyfarm:turnip_crop",
     "crazyfarm:radish_crop",
-    "crazyfarm:cassava_crop"
+    "crazyfarm:cassava_crop",
+    "crazyfarm:onion_giant_crop",
+    "crazyfarm:turnip_giant_crop",
+    "crazyfarm:radish_giant_crop",
+    "crazyfarm:cassava_giant_crop"
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "D": {
+      "item": "crazyfarm:irrigation_device_1"
+    }
+  },
+  "pattern": [
+    "G G",
+    " D ",
+    "G G"
+  ],
+  "result": {
+    "id": "crazyfarm:irrigation_device_2",
+    "count": 1
+  }
+}

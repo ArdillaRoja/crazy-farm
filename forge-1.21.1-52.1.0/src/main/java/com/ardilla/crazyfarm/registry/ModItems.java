@@ -4,6 +4,7 @@ import com.ardilla.crazyfarm.CrazyFarm;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
@@ -49,6 +50,23 @@ public final class ModItems
                     .effect(new MobEffectInstance(MobEffects.REGENERATION, 200), 1.0f)
                     .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200), 1.0f)
                     .build())));
+
+    // Versiones gigantes de los cultivos mutantes (el granjero las pagará bien)
+    public static final RegistryObject<Item> GIANT_ONION = ITEMS.register("giant_onion", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> GIANT_TURNIP = ITEMS.register("giant_turnip", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> GIANT_RADISH = ITEMS.register("giant_radish", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> GIANT_CASSAVA = ITEMS.register("giant_cassava", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+
+    // Dispositivos de riego
+    public static final RegistryObject<Item> IRRIGATION_DEVICE_1 = blockItem("irrigation_device_1", () -> ModBlocks.IRRIGATION_DEVICE_1.get());
+    public static final RegistryObject<Item> IRRIGATION_DEVICE_2 = blockItem("irrigation_device_2", () -> ModBlocks.IRRIGATION_DEVICE_2.get());
+    public static final RegistryObject<Item> IRRIGATION_DEVICE_3 = blockItem("irrigation_device_3", () -> ModBlocks.IRRIGATION_DEVICE_3.get());
+    public static final RegistryObject<Item> IRRIGATION_DEVICE_4 = blockItem("irrigation_device_4", () -> ModBlocks.IRRIGATION_DEVICE_4.get());
+
+    private static RegistryObject<Item> blockItem(String name, Supplier<Block> block)
+    {
+        return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
 
     private static RegistryObject<Item> seeds(String name, Supplier<Block> crop)
     {

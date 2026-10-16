@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "crazyfarm:giant_radish"
+        }
+      ]
+    },
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "crazyfarm:radish_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 2.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "crazyfarm:blocks/radish_giant_crop"
+}

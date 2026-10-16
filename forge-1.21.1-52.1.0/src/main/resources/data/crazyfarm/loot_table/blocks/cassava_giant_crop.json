@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "crazyfarm:giant_cassava"
+        }
+      ]
+    },
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "crazyfarm:cassava_cutting",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 2.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "crazyfarm:blocks/cassava_giant_crop"
+}
