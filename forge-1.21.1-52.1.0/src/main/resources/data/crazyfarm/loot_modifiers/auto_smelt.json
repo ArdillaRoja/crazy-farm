@@ -1,0 +1,11 @@
+{
+  "type": "crazyfarm:smelt_drops",
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": "#crazyfarm:abilities/auto_smelt"
+      }
+    }
+  ]
+}

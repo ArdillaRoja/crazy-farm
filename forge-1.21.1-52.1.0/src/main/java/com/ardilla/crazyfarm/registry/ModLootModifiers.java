@@ -2,6 +2,7 @@ package com.ardilla.crazyfarm.registry;
 
 import com.ardilla.crazyfarm.CrazyFarm;
 import com.ardilla.crazyfarm.loot.AddItemLootModifier;
+import com.ardilla.crazyfarm.loot.SmeltDropsLootModifier;
 import com.mojang.serialization.MapCodec;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,6 +16,9 @@ public final class ModLootModifiers
 
     public static final RegistryObject<MapCodec<AddItemLootModifier>> ADD_ITEM =
             LOOT_MODIFIERS.register("add_item", () -> AddItemLootModifier.CODEC);
+
+    public static final RegistryObject<MapCodec<SmeltDropsLootModifier>> SMELT_DROPS =
+            LOOT_MODIFIERS.register("smelt_drops", () -> SmeltDropsLootModifier.CODEC);
 
     private ModLootModifiers() {}
 }

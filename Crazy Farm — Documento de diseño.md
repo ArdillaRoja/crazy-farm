@@ -109,6 +109,15 @@ El Vitilium es el mineral nuevo. Abunda en las Lush Caves y es menos frecuente p
 - La visión nocturna va como efecto oculto que se renueva solo, para que no parpadee.
 - Los 5 corazones del set se quitan al sacarse cualquier pieza. Se suman al tope de 25, así que el máximo posible pasa a 30 corazones (3 filas).
 
+**Decisiones de la Etapa 3:**
+
+- **Mineral:** tan duro como la obsidiana (dureza 50) y solo se pica con pico de diamante o mejor. Suelta de 2 a 5 pepitas (Fortuna sube la cantidad). Lush Caves: 12 vetas de 6 por chunk entre las alturas -64 y 60. Bajo la capa 0 (pizarra profunda): 2 vetas de 4 por chunk. Moderado; se ajusta probando.
+- **Cadena:** 9 pepitas = 1 barra impura (mesa de crafteo). Barra impura + lingote de netherita + Fruto del Rejuvenecimiento = lingote (receta temporal en mesa de crafteo hasta la Etapa 5). 1 lingote = 2 VitCoin. La placa se hace temporalmente con 8 diamantes + 1 lingote en mesa de crafteo, y la mejora a Vitilium se hace en la mesa de herrería con placa + pieza de netherita + lingote (conserva los encantamientos).
+- **Estadísticas** (siempre mejores que la netherita): herramientas 6000 usos (netherita 2031), velocidad 12 (9), daño +5 (+4), encantabilidad 25 (15). Armadura 4/9/7/4 puntos (netherita 3/8/6/3), dureza 4, durabilidad ×100 (×37).
+- **Habilidades por etiqueta** (`crazyfarm:abilities/*`; cualquier ítem puede tenerlas sin tocar código): pico = fundición automática de minerales crudos, hacha = tala el árbol completo, pala = excava 3×3, azada = ara 3×3 (agachado desactiva las de área), espada = 20 % de golpe crítico ×1,5 y recupera el 10 % del daño como vida.
+- **Armadura:** corona = visión nocturna oculta; pechera = +0,6 de resistencia al empuje; pantalones = resistencia al fuego oculta; botas = +20 % de velocidad; set completo = +5 corazones.
+- **Encantamientos exclusivos (futuro):** todas las piezas están en la etiqueta `crazyfarm:enchantable/vitilium`, lista para usarla como objetivo de encantamientos propios. Ya aceptan los encantamientos vanilla que les corresponden.
+
 ## El granjero
 
 Es un personaje único por partida: compra cultivos, paga en VitCoins y se defiende con escopeta. Será una criatura propia que solo se parece a un aldeano y usa su pantalla de comercio. Así los aldeanos normales no le roban la mesa, los zombis no lo convierten y no participa en invasiones.

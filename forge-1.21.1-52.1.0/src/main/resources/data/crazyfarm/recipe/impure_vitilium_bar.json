@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crazyfarm:vitilium_nugget"
+    },
+    {
+      "item": "crazyfarm:vitilium_nugget"
+    },
+    {
+      "item": "crazyfarm:vitilium_nugget"
+    },
+    {
+      "item": "crazyfarm:vitilium_nugget"
+    },
+    {
+      "item": "crazyfarm:vitilium_nugget"
+    },
+    {
+      "item": "crazyfarm:vitilium_nugget"
+    },
+    {
+      "item": "crazyfarm:vitilium_nugget"
+    },
+    {
+      "item": "crazyfarm:vitilium_nugget"
+    },
+    {
+      "item": "crazyfarm:vitilium_nugget"
+    }
+  ],
+  "result": {
+    "id": "crazyfarm:impure_vitilium_bar",
+    "count": 1
+  }
+}

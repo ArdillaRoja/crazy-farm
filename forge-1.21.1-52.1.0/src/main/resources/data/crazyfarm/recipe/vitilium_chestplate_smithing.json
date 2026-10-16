@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "crazyfarm:vitilium_plate"
+  },
+  "base": {
+    "item": "minecraft:netherite_chestplate"
+  },
+  "addition": {
+    "item": "crazyfarm:vitilium_ingot"
+  },
+  "result": {
+    "id": "crazyfarm:vitilium_chestplate",
+    "count": 1
+  }
+}

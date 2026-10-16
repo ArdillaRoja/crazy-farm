@@ -3,6 +3,8 @@
     "crazyfarm:irrigation_device_1",
     "crazyfarm:irrigation_device_2",
     "crazyfarm:irrigation_device_3",
-    "crazyfarm:irrigation_device_4"
+    "crazyfarm:irrigation_device_4",
+    "crazyfarm:vitilium_ore",
+    "crazyfarm:deepslate_vitilium_ore"
   ]
 }

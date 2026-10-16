@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crazyfarm:impure_vitilium_bar"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "crazyfarm:rejuvenation_fruit"
+    }
+  ],
+  "result": {
+    "id": "crazyfarm:vitilium_ingot",
+    "count": 1
+  }
+}

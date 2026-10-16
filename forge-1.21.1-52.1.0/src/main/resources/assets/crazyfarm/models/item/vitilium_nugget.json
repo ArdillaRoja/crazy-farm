@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crazyfarm:item/vitilium_nugget"
+  }
+}

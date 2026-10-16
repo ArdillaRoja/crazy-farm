@@ -36,6 +36,22 @@ public final class ModCreativeTabs
                 output.accept(ModItems.GIANT_TURNIP.get());
                 output.accept(ModItems.GIANT_RADISH.get());
                 output.accept(ModItems.GIANT_CASSAVA.get());
+                output.accept(ModItems.VITILIUM_ORE.get());
+                output.accept(ModItems.DEEPSLATE_VITILIUM_ORE.get());
+                output.accept(ModItems.VITILIUM_NUGGET.get());
+                output.accept(ModItems.IMPURE_VITILIUM_BAR.get());
+                output.accept(ModItems.VITILIUM_INGOT.get());
+                output.accept(ModItems.VITILIUM_PLATE.get());
+                output.accept(ModItems.VITCOIN.get());
+                output.accept(ModItems.VITILIUM_PICKAXE.get());
+                output.accept(ModItems.VITILIUM_AXE.get());
+                output.accept(ModItems.VITILIUM_SHOVEL.get());
+                output.accept(ModItems.VITILIUM_HOE.get());
+                output.accept(ModItems.VITILIUM_SWORD.get());
+                output.accept(ModItems.VITILIUM_CROWN.get());
+                output.accept(ModItems.VITILIUM_CHESTPLATE.get());
+                output.accept(ModItems.VITILIUM_LEGGINGS.get());
+                output.accept(ModItems.VITILIUM_BOOTS.get());
             }).build());
 
     private ModCreativeTabs() {}

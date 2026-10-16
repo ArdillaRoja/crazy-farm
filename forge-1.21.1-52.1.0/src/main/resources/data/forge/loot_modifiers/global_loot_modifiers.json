@@ -8,6 +8,7 @@
     "crazyfarm:radish_seeds_village_chests",
     "crazyfarm:radish_seeds_zombie",
     "crazyfarm:cassava_cutting_village_chests",
-    "crazyfarm:cassava_cutting_zombie"
+    "crazyfarm:cassava_cutting_zombie",
+    "crazyfarm:auto_smelt"
   ]
 }

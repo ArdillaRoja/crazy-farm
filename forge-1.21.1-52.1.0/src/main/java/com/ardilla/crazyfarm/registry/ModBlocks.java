@@ -5,10 +5,13 @@ import com.ardilla.crazyfarm.block.CrazyCropBlock;
 import com.ardilla.crazyfarm.block.IrrigationDeviceBlock;
 import com.ardilla.crazyfarm.block.MutantCropBlock;
 import com.ardilla.crazyfarm.block.RejuvenationPlantBlock;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -49,6 +52,20 @@ public final class ModBlocks
     public static final RegistryObject<Block> IRRIGATION_DEVICE_2 = device("irrigation_device_2", 2);
     public static final RegistryObject<Block> IRRIGATION_DEVICE_3 = device("irrigation_device_3", 3);
     public static final RegistryObject<Block> IRRIGATION_DEVICE_4 = device("irrigation_device_4", 4);
+
+    // Mineral de Vitilium: tan duro como la obsidiana y solo se pica con pico de diamante o mejor
+    public static final RegistryObject<Block> VITILIUM_ORE = ore("vitilium_ore", MapColor.STONE, SoundType.STONE);
+    public static final RegistryObject<Block> DEEPSLATE_VITILIUM_ORE = ore("deepslate_vitilium_ore", MapColor.DEEPSLATE, SoundType.DEEPSLATE);
+
+    private static RegistryObject<Block> ore(String name, MapColor color, SoundType sound)
+    {
+        return BLOCKS.register(name, () -> new DropExperienceBlock(UniformInt.of(3, 7), BlockBehaviour.Properties.of()
+                .mapColor(color)
+                .instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops()
+                .strength(50.0f, 1200.0f)
+                .sound(sound)));
+    }
 
     private static RegistryObject<Block> crop(String name, Supplier<? extends Item> seed, Supplier<? extends Item> produce,
                                               Supplier<? extends Block> mutant)

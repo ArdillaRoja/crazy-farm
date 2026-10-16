@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crazyfarm:vitilium_ingot"
+    }
+  ],
+  "result": {
+    "id": "crazyfarm:vitcoin",
+    "count": 2
+  }
+}
